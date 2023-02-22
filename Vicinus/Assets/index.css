@@ -1,0 +1,41 @@
+figure img {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  #small-image {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+  #medium-image {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  #big-image {
+    display: block;
+  }
+}
+
+figcaption {
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+
+  text-align: center;
+}
+.accordion-header {
+  background-color: #eee;
+  color: #333;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px;
+}
