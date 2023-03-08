@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector("nav");
+
+  hamburger.addEventListener("click", function () {
+    hamburger.classList.toggle("active");
+    nav.classList.toggle("active");
+  });
   const satisfactionElements = document.querySelectorAll("td#satisfaction");
   console.log(satisfactionElements);
   satisfactionElements.forEach((element) => {

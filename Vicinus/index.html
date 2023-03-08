@@ -57,11 +57,14 @@
     <link rel="stylesheet" type="text/css" href="./Assets/css/menu.css" />
     <link rel="stylesheet" type="text/css" href="./Assets/css/index.css" />
     <link rel="stylesheet" type="text/css" href="./Assets/css/general.css" />
+    <link rel="stylesheet" type="text/css" href="./Assets/css/tabel.css" />
+    <link rel="stylesheet" type="text/css" href="./Assets/css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="./Assets/css/hamburger.css" />
     <link
       rel="stylesheet"
       type="text/css"
       href="./Assets/css/generalMed.css"
-      media="screen and (max-width:1000px)"
+      media="screen and (max-width:1200px)"
     />
     <link
       rel="stylesheet"
@@ -75,34 +78,43 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body style="max-width: 80vw; padding-bottom: 100px">
+  <body style="padding-top: 100px;">
     <!-- 1.4. Impartirea in header, main si footer -->
-    <nav style="display: flex">
+    <header >
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <h1 id="header-title">Vicinus</h1>
+      <!-- 1.5 Sistem de navigare -->
+    </header>
+    <nav >
       <div>
-        <img id="big-image" src="./Assets/small-image.png" alt="logo" />
+        <img id="logo-image" src="./Assets/small-image.png" alt="logo"  />
       </div>
       <ul class="menu">
         <li>
           <div>Home</div>
           <ul>
             <li>
-              <a href="#welcome"
-              >
+              <a href="#welcome"style="height: 0px;"> 
+                <div style="display: flex; ">
+                Welcome!
+                  <i
+                  class="fa-solid fa-heart fa-beat"
+                  style="--fa-beat-scale: 2;"
+                  ></i
+                  ></a>
+                </div>
+                <ul>
+                  <li><a href="#idealogy">Idealogy</a></li>
+                  <li><a href="#reviews">Reviews</a></li>
+                </ul>
+              </li>
+              <li>
               
-              <div style="display: flex;">
-              Welcome!
-                <i
-                class="fa-solid fa-heart fa-beat"
-                style="--fa-beat-scale: 2;"
-                ></i
-                ></a>
-              </div>
-              <ul>
-                <li><a href="#idealogy">Idealogy</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-              </ul>
-            </li>
-            <li>
+              
               <a href="#orders">Orders</a>
               <ul>
                 <li><a href="#process">Process</a></li>
@@ -158,15 +170,8 @@
             <li><a href="settings.html#privacy">Privacy</a></li>
           </ul>
         </li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="register.html">Register</a></li>
-      </ul>
+    
     </nav>
-    <header>
-      <h1 id="header-title">Vicinus</h1>
-
-      <!-- 1.5 Sistem de navigare -->
-    </header>
     <main>
       <div id="grid-container">
         <section id="grid-welcome">
@@ -210,7 +215,7 @@
             <!-- 1.9 1.10-->
             <strong> freshest </strong>and most flavorful ingredients available.
           </p>
-          <section>
+          <section >
             <!-- 1.6 -->
             <!-- 1.10 -->
             <h3 id="idealogy">Our idealogy</h3>
@@ -320,7 +325,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>Farm 1</td>
+                  <td >Farm 1</td>
                   <td>8:00</td>
                   <td>18:00</td>
                   <td>Strada 1, nr. 1</td>

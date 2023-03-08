@@ -1,0 +1,27 @@
+html {
+  font-size: 12px;
+}
+body {
+  --spaceOX: 2px;
+  --paddingInside: 5px;
+}
+#grid-container {
+  display: grid;
+  height: fit-content;
+  width: 100%;
+  /* 3.b */
+  gap: 5px 10px;
+  grid-template-areas:
+    "z-welcome"
+    "z-content"
+    "z-events"
+    "z-farms-info"
+    "z-announcements"
+    "z-users"
+    "z-users-statistics"
+    "z-server-status";
+}
+nav {
+  padding: 0;
+  width: 100%;
+}

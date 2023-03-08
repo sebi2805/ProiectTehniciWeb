@@ -1,0 +1,9 @@
+footer {
+  background-color: var(--green700);
+  color: white;
+  padding: 20px;
+}
+footer a {
+  color: var(--cyan200);
+}
+/* 3.5 */

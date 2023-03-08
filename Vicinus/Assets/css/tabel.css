@@ -1,0 +1,28 @@
+#stilizare-tabel {
+  width: 100%;
+  caption-side: bottom;
+  border: 2px solid var(--cyan800);
+}
+/* 2.4 */
+#stilizare-tabel td:nth-child(even) {
+  border-right: 4px solid var(--green400);
+}
+
+#stilizare-tabel td:nth-child(odd) {
+  border-right: 4px solid var(--danger400);
+}
+#stilizare-tabel tr:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#stilizare-tabel tbody {
+  border-top: 8px solid var(--cyan800);
+}
+#stilizare-tabel tfoot {
+  border-top: 8px solid var(--cyan800);
+}
+#stilizare-tabel-container {
+  max-width: 100%;
+
+  overflow-x: auto;
+  /* puteam sa pun scroll dar nu vreau sa fie mereu vizibila bara */
+}
