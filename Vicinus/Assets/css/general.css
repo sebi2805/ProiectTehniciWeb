@@ -37,3 +37,7 @@ td {
   padding: 2px;
   vertical-align: top;
 }
+figure img {
+  max-width: 520px;
+  width: 100%;
+}

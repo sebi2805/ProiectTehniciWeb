@@ -60,6 +60,7 @@
     <link rel="stylesheet" type="text/css" href="./Assets/css/tabel.css" />
     <link rel="stylesheet" type="text/css" href="./Assets/css/footer.css" />
     <link rel="stylesheet" type="text/css" href="./Assets/css/hamburger.css" />
+    <link rel="stylesheet" type="text/css" href="./Assets/css/print.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -78,7 +79,11 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body style="padding-top: 100px;">
+  <body  >
+    <div class="printare">
+
+      <h1 class="css-printare">This is a school project</h1>
+    </div>
     <!-- 1.4. Impartirea in header, main si footer -->
     <header >
       <div class="hamburger">
@@ -97,35 +102,19 @@
         <li>
           <div>Home</div>
           <ul>
-            <li>
-              <a href="#welcome"style="height: 0px;"> 
-                <div style="display: flex; ">
+            <li >
+              <a href="#welcome" tabindex="-1">  
                 Welcome!
-                  <i
-                  class="fa-solid fa-heart fa-beat"
-                  style="--fa-beat-scale: 2;"
-                  ></i
-                  ></a>
-                </div>
-                <ul>
-                  <li><a href="#idealogy">Idealogy</a></li>
-                  <li><a href="#reviews">Reviews</a></li>
-                </ul>
-              </li>
-              <li>
-              
-              
-              <a href="#orders">Orders</a>
-              <ul>
-                <li><a href="#process">Process</a></li>
-                <li><a href="#delivery">Delivery</a></li>
-              </ul>
+              </a>
             </li>
             <li>
-              <a href="#videos">Videos</a>
+              <a href="#orders" tabindex="-1">Orders</a>
             </li>
             <li>
-              <a href="#joke">Joke</a>
+              <a tabindex="-1" href="#videos">Videos</a>
+            </li>
+            <li>
+              <a tabindex="-1"href="#joke">Joke</a>
             </li>
 
             <!-- Comentatare deoarece nu depind de pagina, sunt doar un footer, o sa fie prezent pe toate paginile -->
@@ -141,33 +130,33 @@
           </ul>
         </li>
         <li>
-          <a href="store.html">Store</a>
+          <a href="store.html" tabindex="-1">Store</a>
           <ul>
             <li>
-              <a href="store.html#fruits"
+              <a tabindex="-1" href="store.html#fruits"
                 >Fruits <i class="fa-solid fa-wheat-awn"></i
               ></a>
             </li>
             <!-- 2.c -->
-            <li><a href="store.html#vegetables">Vegetables</a></li>
+            <li><a  tabindex="-1"href="store.html#vegetables">Vegetables</a></li>
             <li>
-              <a href="store.html#meat">
+              <a tabindex="-1" href="store.html#meat">
                 <div style="display: flex">
                   Meat <i class="fa-regular fa-cow"></i>
                 </div>
               </a>
             </li>
-            <li><a href="store.html#dairy">Dairy</a></li>
-            <li><a href="store.html#bakery">Bakery</a></li>
-            <li><a href="store.html#drinks">Drinks</a></li>
+            <li><a tabindex="-1" href="store.html#dairy">Dairy</a></li>
+            <li><a tabindex="-1" href="store.html#bakery">Bakery</a></li>
+            <li><a tabindex="-1" href="store.html#drinks">Drinks</a></li>
           </ul>
         </li>
         <li>
-          <a href="settings.html">Settings</a>
+          <a tabindex="-1" href="settings.html">Settings</a>
           <ul>
-            <li><a href="settings.html#account">Account</a></li>
-            <li><a href="settings.html#notifications">Notifications</a></li>
-            <li><a href="settings.html#privacy">Privacy</a></li>
+            <li><a tabindex="-1" href="settings.html#account">Account</a></li>
+            <li><a tabindex="-1" href="settings.html#notifications">Notifications</a></li>
+            <li><a tabindex="-1" href="settings.html#privacy">Privacy</a></li>
           </ul>
         </li>
     

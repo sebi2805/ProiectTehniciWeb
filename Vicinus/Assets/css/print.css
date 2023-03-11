@@ -1,0 +1,70 @@
+.css-printare {
+  width: 80%;
+  display: none;
+  text-align: center;
+  border: 6px dotted black;
+}
+.printare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media print {
+  .css-printare {
+    display: block;
+  }
+  iframe {
+    display: none;
+  }
+  img {
+    display: none;
+  }
+  picture {
+    display: none;
+  }
+  .arrow {
+    display: none;
+  }
+  #videos {
+    display: none;
+  }
+  #grid-container {
+    display: block;
+  }
+  #header-title {
+    page-break-after: always;
+    text-decoration: underline;
+    font-size: calc(var(--h1size) * 2);
+    /* //2.5rem */
+  }
+  footer {
+    page-break-before: always;
+  }
+  nav {
+    display: none;
+  }
+  @page {
+    @bottom-left {
+      content: "Virtopeanu Sebastian-Filip";
+      width: 100px;
+      height: 2cm;
+      opacity: 0.65;
+      border: 2px double black;
+      transform: rotate(-45deg);
+    }
+  }
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  @page :left {
+    margin-left: 2.5cm;
+    margin-right: 0.5cm;
+  }
+
+  @page :right {
+    margin-left: 0.5cm;
+    margin-right: 2.5cm;
+  }
+} ;

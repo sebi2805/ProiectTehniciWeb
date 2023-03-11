@@ -1,7 +1,13 @@
+$body-height: 60px;
+$animation-duration: 0.3s;
+$width-menu-animation: 5%;
+$width-menu: 100%;
+$padding-top: 20px;
 nav {
   cursor: pointer;
   display: flex;
-  height: 60px;
+  height: $body-height;
+  padding-top: $padding-top;
   position: sticky;
   top: 0;
   margin-left: calc(var(--spaceOX) * -0.5);
@@ -9,23 +15,20 @@ nav {
 
 ul.menu {
   list-style-type: none;
-  width: 100%;
+  width: $width-menu;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: justify;
 }
-
 ul.menu > li {
   padding-top: 20px;
 }
-
 ul.menu li {
-  width: 100%;
+  width: $width-menu;
   background-color: var(--green500);
   color: var(--white);
   overflow: hidden;
-  transition: overflow 0.3s ease-in-out;
   height: var(--menu-height);
 }
 
@@ -38,7 +41,7 @@ ul.menu li:hover {
 ul.menu > li > div:hover,
 ul.menu > li > a:hover {
   transform: scale(1.2);
-  transition: transform 0.3s ease-in-out;
+  transition: transform $animation-duration ease-in-out;
   z-index: 10;
   position: relative;
   filter: 0;
@@ -54,7 +57,7 @@ ul.menu > li > ul > li > div {
 ul.menu > li > ul > li > a::after,
 ul.menu > li > ul > li > div::after {
   content: "";
-  width: 5%;
+  width: $width-menu-animation;
   height: 0;
   display: block;
   position: absolute;
@@ -68,7 +71,7 @@ ul.menu > li > ul > li > div::after {
 ul.menu > li > ul > li > a::before,
 ul.menu > li > ul > li > div::before {
   content: "";
-  width: 5%;
+  width: $width-menu-animation;
   height: 0;
   display: block;
   position: absolute;
@@ -87,18 +90,17 @@ ul.menu > li > ul > li > div:hover::before {
 }
 
 ul.menu li {
-  width: 100%;
+  width: $width-menu;
   border-right: 2px solid var(--green600);
 }
 
 ul.menu ul {
-  -webkit-padding-start: 0;
   padding-inline-start: 0;
 }
 
 ul.menu li a,
 ul.menu li div {
-  width: 100%;
+  width: $width-menu;
   height: var(--menu-height);
   color: white;
   text-align: center;
@@ -118,4 +120,4 @@ ul.menu li div {
 ul.menu > li {
   position: relative;
   display: inline-block;
-} /*# sourceMappingURL=menu.css.map */
+}

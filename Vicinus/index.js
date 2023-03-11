@@ -1,13 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
   const nav = document.querySelector("nav");
-
+  const li = document.querySelectorAll("ul.menu > li");
+  const a = document.querySelectorAll("ul.menu > li > ul > li > a");
   hamburger.addEventListener("click", function () {
     hamburger.classList.toggle("active");
     nav.classList.toggle("active");
   });
+
+  li.forEach((e) =>
+    e.addEventListener("click", function () {
+      e.querySelectorAll("ul > li ").forEach((a) =>
+        a.classList.toggle("active")
+      );
+    })
+  );
   const satisfactionElements = document.querySelectorAll("td#satisfaction");
-  console.log(satisfactionElements);
+
   satisfactionElements.forEach((element) => {
     const satisfactionPercentage = parseInt(element.textContent.slice(0, -1)); //pentru a nu lua si % din text
     if (satisfactionPercentage < 50) {
