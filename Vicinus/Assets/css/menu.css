@@ -2,6 +2,7 @@ nav {
   cursor: pointer;
   display: flex;
   height: 60px;
+  padding-top: 20px;
   position: sticky;
   top: 0;
   margin-left: calc(var(--spaceOX) * -0.5);
@@ -15,87 +16,9 @@ ul.menu {
   display: flex;
   justify-content: justify;
 }
-
-ul.menu > li {
+ul.menu li {
   padding-top: 20px;
 }
-
-ul.menu li {
-  width: 100%;
-  background-color: var(--green500);
-  color: var(--white);
-  overflow: hidden;
-  transition: overflow 0.3s ease-in-out;
-  height: var(--menu-height);
-}
-
-ul.menu li:hover {
-  overflow: visible;
-  color: white;
-}
-
-/* 3.1.a */
-ul.menu > li > div:hover,
-ul.menu > li > a:hover {
-  transform: scale(1.2);
-  transition: transform 0.3s ease-in-out;
-  z-index: 10;
-  position: relative;
-  filter: 0;
-}
-
-ul.menu > li > ul > li > a,
-ul.menu > li > ul > li > div {
-  position: relative;
-  padding-top: 5px;
-  height: 50px;
-}
-
-ul.menu > li > ul > li > a::after,
-ul.menu > li > ul > li > div::after {
-  content: "";
-  width: 5%;
-  height: 0;
-  display: block;
-  position: absolute;
-  z-index: 1;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to left, var(--green10), var(--green500));
-}
-
-/* 3.1.c */
-ul.menu > li > ul > li > a::before,
-ul.menu > li > ul > li > div::before {
-  content: "";
-  width: 5%;
-  height: 0;
-  display: block;
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  bottom: 0;
-  background: linear-gradient(to right, var(--green10), var(--green500));
-}
-
-ul.menu > li > ul > li > a:hover::after,
-ul.menu > li > ul > li > a:hover::before,
-ul.menu > li > ul > li > div:hover::after,
-ul.menu > li > ul > li > div:hover::before {
-  height: 100%;
-  transition: height 0.5s ease-in-out;
-}
-
-ul.menu li {
-  width: 100%;
-  border-right: 2px solid var(--green600);
-}
-
-ul.menu ul {
-  -webkit-padding-start: 0;
-  padding-inline-start: 0;
-}
-
 ul.menu li a,
 ul.menu li div {
   width: 100%;
@@ -110,12 +33,81 @@ ul.menu li div {
   font-size: 1.5rem;
   text-decoration: none;
 }
-
-#grid-container {
-  padding-top: 90px;
-}
-
 ul.menu > li {
   position: relative;
   display: inline-block;
-} /*# sourceMappingURL=menu.css.map */
+  width: 100%;
+  background-color: var(--green500);
+  color: var(--white);
+  overflow: hidden;
+  height: var(--menu-height);
+}
+ul.menu > li > div:hover,
+ul.menu > li > a:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
+  position: relative;
+  filter: 0;
+}
+ul.menu > li > ul > li {
+  background-color: var(--green500);
+}
+ul.menu > li > ul > li > a,
+ul.menu > li > ul > li > div {
+  position: relative;
+  padding-top: 5px;
+  height: 50px;
+}
+ul.menu > li > ul > li > a::after,
+ul.menu > li > ul > li > div::after {
+  content: "";
+  width: 5%;
+  height: 0;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to left, var(--green10), var(--green500));
+}
+ul.menu > li > ul > li > a::before,
+ul.menu > li > ul > li > div::before {
+  content: "";
+  width: 5%;
+  height: 0;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to right, var(--green10), var(--green500));
+}
+ul.menu > li > ul > li > a:hover::after,
+ul.menu > li > ul > li > a:hover::before,
+ul.menu > li > ul > li > div:hover::after,
+ul.menu > li > ul > li > div:hover::before {
+  height: 100%;
+  background-color: red;
+  transition: height 0.5s ease-in-out;
+}
+ul.menu > li:hover {
+  overflow: visible;
+  color: white;
+}
+
+/* 3.1.a */
+/* 3.1.c */
+ul.menu li {
+  width: 100%;
+  border-right: 2px solid var(--green600);
+}
+
+ul.menu ul {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
+#grid-container {
+  padding-top: 90px;
+}/*# sourceMappingURL=menu.css.map */

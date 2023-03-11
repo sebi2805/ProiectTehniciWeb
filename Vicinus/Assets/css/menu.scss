@@ -20,74 +20,94 @@ ul.menu {
   padding: 0;
   display: flex;
   justify-content: justify;
-}
-ul.menu > li {
-  padding-top: 20px;
-}
-ul.menu li {
-  width: $width-menu;
-  background-color: var(--green500);
-  color: var(--white);
-  overflow: hidden;
-  height: var(--menu-height);
-}
 
-ul.menu li:hover {
-  overflow: visible;
-  color: white;
+  li {
+    padding-top: 20px;
+    a,
+    div {
+      width: $width-menu;
+      height: var(--menu-height);
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+  }
+  > li {
+    position: relative;
+    display: inline-block;
+    width: $width-menu;
+    background-color: var(--green500);
+    color: var(--white);
+    overflow: hidden;
+    height: var(--menu-height);
+    > div:hover,
+    > a:hover {
+      transform: scale(1.2);
+      transition: transform $animation-duration ease-in-out;
+      z-index: 10;
+      position: relative;
+      filter: 0;
+    }
+
+    > ul {
+      > li {
+        background-color: var(--green500);
+      }
+      > li > a,
+      > li > div {
+        position: relative;
+        padding-top: 5px;
+        height: 50px;
+      }
+      > li > a::after,
+      > li > div::after {
+        content: "";
+        width: $width-menu-animation;
+        height: 0;
+        display: block;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to left, var(--green10), var(--green500));
+      }
+      > li > a::before,
+      > li > div::before {
+        content: "";
+        width: $width-menu-animation;
+        height: 0;
+        display: block;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(to right, var(--green10), var(--green500));
+      }
+      > li > a:hover::after,
+      > li > a:hover::before,
+      > li > div:hover::after,
+      > li > div:hover::before {
+        height: 100%;
+        background-color: red;
+        transition: height 0.5s ease-in-out;
+      }
+    }
+  }
+  > li:hover {
+    overflow: visible;
+    color: white;
+  }
 }
 
 /* 3.1.a */
-ul.menu > li > div:hover,
-ul.menu > li > a:hover {
-  transform: scale(1.2);
-  transition: transform $animation-duration ease-in-out;
-  z-index: 10;
-  position: relative;
-  filter: 0;
-}
-
-ul.menu > li > ul > li > a,
-ul.menu > li > ul > li > div {
-  position: relative;
-  padding-top: 5px;
-  height: 50px;
-}
-
-ul.menu > li > ul > li > a::after,
-ul.menu > li > ul > li > div::after {
-  content: "";
-  width: $width-menu-animation;
-  height: 0;
-  display: block;
-  position: absolute;
-  z-index: 1;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to left, var(--green10), var(--green500));
-}
 
 /* 3.1.c */
-ul.menu > li > ul > li > a::before,
-ul.menu > li > ul > li > div::before {
-  content: "";
-  width: $width-menu-animation;
-  height: 0;
-  display: block;
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  bottom: 0;
-  background: linear-gradient(to right, var(--green10), var(--green500));
-}
-
-ul.menu > li > ul > li > a:hover::after,
-ul.menu > li > ul > li > a:hover::before,
-ul.menu > li > ul > li > div:hover::after,
-ul.menu > li > ul > li > div:hover::before {
-  height: 100%;
-  transition: height 0.5s ease-in-out;
-}
 
 ul.menu li {
   width: $width-menu;
@@ -98,26 +118,6 @@ ul.menu ul {
   padding-inline-start: 0;
 }
 
-ul.menu li a,
-ul.menu li div {
-  width: $width-menu;
-  height: var(--menu-height);
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-
 #grid-container {
   padding-top: 90px;
-}
-
-ul.menu > li {
-  position: relative;
-  display: inline-block;
 }
