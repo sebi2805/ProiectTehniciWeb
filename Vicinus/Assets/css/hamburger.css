@@ -71,16 +71,25 @@
     justify-content: justify;
     flex-direction: column;
   }
-
+  ul.menu li {
+    padding-top: 0;
+  }
+  ul.menu > li > div,
+  ul.menu > li > a {
+    padding-top: 10px;
+  }
   ul.menu > li > ul > li > a {
     padding-top: 2px;
     height: 25px;
   }
-
+  ul.menu > li > ul {
+    height: fit-content;
+  }
   ul.menu > li > ul > li {
-    height: 0px;
+    height: 0;
     transition: height 1s ease-in-out;
   }
+
   ul.menu > li > ul > li.active {
     height: 25px;
   }

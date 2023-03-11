@@ -53,12 +53,12 @@ ul.menu > li > a:hover {
 ul.menu > li > ul > li {
   background-color: var(--green500);
 }
-ul.menu > li > ul > li > a,
+/* ul.menu > li > ul > li > a,
 ul.menu > li > ul > li > div {
   position: relative;
   padding-top: 5px;
   height: 50px;
-}
+} */
 ul.menu > li > ul > li > a::after,
 ul.menu > li > ul > li > div::after {
   content: "";
@@ -105,9 +105,9 @@ ul.menu li {
 
 ul.menu ul {
   -webkit-padding-start: 0;
-          padding-inline-start: 0;
+  padding-inline-start: 0;
 }
 
 #grid-container {
   padding-top: 90px;
-}/*# sourceMappingURL=menu.css.map */
+} /*# sourceMappingURL=menu.css.map */
