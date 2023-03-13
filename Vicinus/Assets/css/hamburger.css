@@ -87,10 +87,12 @@
   }
   ul.menu > li > ul > li {
     height: 0;
+    overflow: hidden;
     transition: height 1s ease-in-out;
   }
 
   ul.menu > li > ul > li.active {
+    overflow: visible;
     height: 25px;
   }
 }
