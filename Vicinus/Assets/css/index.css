@@ -218,6 +218,11 @@ body {
   /* 2.c */
   min-width: 450px;
   background-color: var(--green1);
+  transition: font-size 0.5s linear;
+}
+body * {
+  animation: none;
+  transition: none;
 }
 body.dark {
   background-color: var(--green500);
