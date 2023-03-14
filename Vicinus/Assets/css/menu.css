@@ -34,6 +34,7 @@ ul.menu li div {
   text-decoration: none;
 }
 ul.menu > li {
+  position: relative;
   display: inline-block;
   width: 100%;
   background-color: var(--green500);
@@ -50,15 +51,14 @@ ul.menu > li > a:hover {
   filter: 0;
 }
 ul.menu > li > ul > li {
-  position: relative;
   background-color: var(--green500);
 }
-/* ul.menu > li > ul > li > a,
+ul.menu > li > ul > li > a,
 ul.menu > li > ul > li > div {
   position: relative;
   padding-top: 5px;
   height: 50px;
-} */
+}
 ul.menu > li > ul > li > a::after,
 ul.menu > li > ul > li > div::after {
   content: "";
@@ -90,10 +90,11 @@ ul.menu > li > ul > li > div:hover::before {
   height: 100%;
   transition: height 0.5s ease-in-out;
 }
-
 ul.menu > li:hover {
-  overflow: visible;
-  color: white;
+  animation-name: menu-item;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 }
 
 /* 3.1.a */
@@ -105,9 +106,18 @@ ul.menu li {
 
 ul.menu ul {
   -webkit-padding-start: 0;
-  padding-inline-start: 0;
+          padding-inline-start: 0;
 }
 
 #grid-container {
   padding-top: 90px;
-} /*# sourceMappingURL=menu.css.map */
+}
+
+@keyframes menu-item {
+  0% {
+    height: 50px;
+  }
+  100% {
+    height: 270px;
+  }
+}/*# sourceMappingURL=menu.css.map */

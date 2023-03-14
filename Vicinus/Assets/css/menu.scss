@@ -98,15 +98,17 @@ ul.menu {
         > div:hover::after,
         > div:hover::before {
           height: 100%;
-          background-color: red;
           transition: height 0.5s ease-in-out;
         }
       }
     }
   }
+
   > li:hover {
-    overflow: visible;
-    color: white;
+    animation-name: menu-item;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
   }
 }
 
@@ -125,4 +127,12 @@ ul.menu ul {
 
 #grid-container {
   padding-top: 90px;
+}
+@keyframes menu-item {
+  0% {
+    height: 50px;
+  }
+  100% {
+    height: 270px;
+  }
 }
